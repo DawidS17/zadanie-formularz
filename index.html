@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <input type="text" id="numer1"></input>
+    <input type="text" id="numer2"></input>
+    <button id="but1">Dodaj</button>
+    <button id="but2">Odejmin</button>
+    <button id="but3">Pomnóz</button>
+    <p></p>
+</form>
+
+<script>
+
+const tx1 = document.querySelector('#numer1');
+const tx2 = document.querySelector('#numer2');
+
+const plu = document.querySelector('#but1');
+const min = document.querySelector('#but2');
+const mno = document.querySelector('#but3');
+
+const p = document.querySelector('p');
+
+// const num1 = parseInt(tx1.value);
+// const num2 = parseInt(tx2.value);
+
+    plu.addEventListener('click',function(evt){
+        evt.preventDefault();
+        const num1 = parseInt(tx1.value);
+        const num2 = parseInt(tx2.value);
+    const sumdod = num1+num2;
+    p.innerHTML = sumdod;
+    })
+    
+    min.addEventListener('click',function(evt){
+        evt.preventDefault();
+        const num1 = parseInt(tx1.value);
+        const num2 = parseInt(tx2.value);
+    const summin = num1-num2;
+    p.innerHTML = summin;
+    })
+
+    mno.addEventListener('click',function(evt){
+        evt.preventDefault();
+        const num1 = parseInt(tx1.value);
+        const num2 = parseInt(tx2.value);
+    const summno = num1*num2;
+    p.innerHTML = summno;
+    })
+
+
+</script>
+
+</body>
+</html>
